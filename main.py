@@ -13,14 +13,14 @@ def auto_func(app, card):
     """
     count = app.datastore.setdefault("counter", 0)
     count += 1
-    app.datastore["counter"] = count
+    app.datastore["counter"] = countmain.py
     return "card3"
 
 
 # The templates for these cards can be found in pypercard.html.
 cards = [
-    Card("card1", auto_advance=10, transition="card2"),
-    Card("card2", auto_advance=20, transition=auto_func),
+    Card("card1", auto_advance=5, transition="card2"),
+    Card("card2", auto_advance=5, transition=auto_func),
     Card("card3", auto_advance=5, transition="card1"),
 ]
 
@@ -31,8 +31,20 @@ carousel_app = App(
 )
 
 
+@carousel_app.transition("card1", "click", "go_2")
+def go_2(app, card):
+    return "card2"
+
 @carousel_app.transition("card2", "click", "reset")
 def reset(app, card):
+    return "card1"
+
+@carousel_app.transition("card2", "click", "go_3")
+def go_3(app, card):
+    return "card3"
+
+@carousel_app.transition("card3", "click", "go_1")
+def go_1(app, card):
     return "card1"
 
 
