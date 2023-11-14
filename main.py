@@ -6,30 +6,10 @@ name of the next card.
 """
 from pypercard import App, Card
 
-
-def auto_func(app, card):
-    """
-    Called while transitioning from card 2, to card 3.
-    """
-    count = app.datastore.setdefault("counter", 0)
-    count += 1
-    app.datastore["counter"] = countmain.py
-    return "card3"
-
-
-# The templates for these cards can be found in pypercard.html.
-cards = [
-    Card("card1", auto_advance=5, transition="card2"),
-    Card("card2", auto_advance=5, transition=auto_func),
-    Card("card3", auto_advance=5, transition="card1"),
-]
-
-
 # Create the app while ensuring the counter is reset.
 carousel_app = App(
-    name="PyperCard carousel", datastore={"counter": 0}, cards=cards
+    name="PyperCard carousel"
 )
-
 
 @carousel_app.transition("card1", "click", "go_2")
 def go_2(app, card):

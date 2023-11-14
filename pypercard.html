@@ -22,27 +22,23 @@
             <article>
                 <template id="card1">
                     <div class="p-card">
-                        <h2>Important Notes</h2>
+                        <h2>Card 1</h2>
                         <div class="p-card__content">
-                            <p>Keep the Pypercard a <code>&lt;template id="card#"&gt;</code> or it breaks.</p>
-                            <p>For example, try changing the <code>&lt;template id="card#"&gt;</code> to <code>&lt;div id="card#"&gt;</code>, and it will trigger a <code>RuntimeError: Unable to find template for card 'card1'.</code></p>
-                            <p>Just be sure to change it back.</p>
+                            <p>This is card 1.</p>
+                            <p>This card will automatically transistion to card 2 in five seconds</p>
+                            <p>Or you can go to card 2 with the button below.</p>
                             <button id="go_2">To card 2</button>
                         </div>
                     </div>
                 </template>
                 <template id="card2">
                     <div class="p-card">
-                        <h2>The second card</h2>
+                        <h2>Card 2</h2>
                         <div class="p-card__content">
-                            <p>This card will automatically transition to the third card after 20
-                            seconds, by calling a user defined function with some simple counting
-                            logic in it. The user defined function simply returns a string containing
-                            the name of the next card to render.</p>
-                            <p>But if you click the button, you'll transition back to the
-                            first card, and the automatic transition won't happen.</p>
-                            <button id="reset" autofocus>Reset</button>
-                            <button id="go_3">To card 3</button>
+                            <p>You can click to card 3 to go to the final card.</p>
+                            <p>Or you can click reset to go back to card.</p>
+                            <button id="reset" >Reset</button>
+                            <button id="go_3" autofocus>To card 3</button>
                         </div>
                     </div>
                 </template>
@@ -50,9 +46,8 @@
                     <div class="p-card">
                         <h2>The final card</h2>
                         <div class="p-card__content">
-                            <p>That's it! This card has been displayed {counter} time[s].</p>
-                            <p>It will automatically transition back to the first after 5
-                            seconds.</p>
+                            <p>Now you have made it to card 3.</p>
+                            <p>Click the to card 1 button to reset.</p>
                             <button id="go_1" autofocus>To card 1</button>
                         </div>
                     </div>
