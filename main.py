@@ -1,8 +1,5 @@
 """
-This simple app demonstrates how cards can automatically advance to another
-card after a certain amount of time. The auto_advance can either be a string
-containing the name of the next card, or a function to call that returns the
-name of the next card.
+Simple exploration of the functionalities of PyperCard.
 """
 from pypercard import App, Card
 
@@ -27,5 +24,12 @@ def go_3(app, card):
 def go_1(app, card):
     return "card1"
 
+@carousel_app.transition("card3", "click", "go_4")
+def go_4(app, card):
+    return "card4"
+
+@carousel_app.transition("card4", "click", "restart")
+def restart(app, card):
+    return "card1"
 
 carousel_app.start("card1")
