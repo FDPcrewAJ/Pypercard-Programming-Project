@@ -10,7 +10,7 @@ carousel_app = App(
 
 @carousel_app.transition("card1", "click", "go_2")
 def go_2(app, card):
-    return "card2"
+    return "card2"  
 
 @carousel_app.transition("card2", "click", "reset")
 def reset(app, card):
@@ -29,7 +29,9 @@ def go_4(app, card):
     return "card4"
 
 @carousel_app.transition("card4", "click", "restart")
-def restart(app, card):
+def restart(app, card1):
     return "card1"
+
+#reset(carousel_app, "card1")
 
 carousel_app.start("card1")
