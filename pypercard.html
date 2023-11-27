@@ -22,45 +22,61 @@
             <article>
                 <template id="card1">
                     <div class="p-card">
-                        <h2>Card 1</h2>
+                        <h2>Welcome</h2>
                         <div class="p-card__content">
-                            <p>This is card 1.</p>
-                            <p>You can go to card 2 with the button below.</p>
-                            <label for="user_name">Enter your name:</label>
+                            <p>Welcome to a Pypercard Madlib!</p>
+                            <p>Follow the instructions to create your Madlib.</p>
+                            <label for="user_name">Please enter your name:</label>
                             <input id="user_name" type="text">
-                            <button id="go_2">To card 2</button>
+                            <button id="go_2">Begin</button>
                         </div>
                     </div>
                 </template>
                 <template id="card2">
                     <div class="p-card">
-                        <h2>Card 2</h2>
+                        <h2>Input: Noun</h2>
                         <div class="p-card__content">
-                            <p>You can click to card 3 to go to the final card.</p>
-                            <p>Or you can click reset to go back to card 1.</p>
-                            <h3>Hello {user_name}</h3>
-                            <button id="reset" >Reset</button>
-                            <button id="go_3" autofocus>To card 3</button>
+                            <label for="n_1">Please enter a noun into the text box below:</label>
+                            <input id="n_1" type="text">
+                            <button id="go_3">Next Input</button>
                         </div>
                     </div>
                 </template>
                 <template id="card3">
                     <div class="p-card">
-                        <h2>The final card</h2>
+                        <h2>Input: Verb</h2>
                         <div class="p-card__content">
-                            <p>Now you have made it to card 3.</p>
-                            <p>Click the to card 1 button to reset.</p>
-                            <button id="go_1" autofocus>Reset</button>
-                            <button id="go_4">Something Else</button>
+                            <label for="v_1">Please enter a verb into the text box below:</label>
+                            <input id="v_1" type="text">
+                            <button id="go_4">Next Input</button>
                         </div>
                     </div>
                 </template>
                 <template id="card4">
                     <div class="p-card">
-                        <h2>A fourth card</h2>
-                        <p>This is a fourth card.</p>
-                        <p>something a little different, outside of the loop.</p>
-                        <button id="restart" autofocus>Restart</button>
+                        <h2>Input: Adjective</h2>
+                        <label for="aj_1">Please enter an adjective into the text box below:</label>
+                        <input id="aj_1" type="text">
+                        <button id="go_5">Next Input</button>
+                    </div>
+                </template>
+                <template id="card5">
+                    <div class="p-card">
+                        <h2>Input: Adverb</h2>
+                        <label for="ad_1">Please enter an adverb into the text box below:</label>
+                        <input id="ad_1" type="text">
+                        <button id="go_6">Next Input</button>
+                    </div>
+                </template>
+                <template id="card6">
+                    <div class="p-card">
+                        <h2>Results</h2>
+                        <h3>Name: {user_name}</h3>
+                        <h3>Noun: {n_1}</h3>
+                        <h3>Verb: {v_1}</h3>
+                        <h3>Adjective: {aj_1}</h3>
+                        <h3>Adverb: {ad_1}</h3>
+                        <button id="restart">Restart</button>
                     </div>
                 </template>
             </article>
