@@ -30,7 +30,7 @@ def go_5(app, card):
 
 @madlib_app.transition("card5", "click", "go_6")
 def go_6(app,card):
-    app.datastore["ad_1"] = card.get_by_id("ad_1").value
+    app.datastore["av_1"] = card.get_by_id("av_1").value
     return "card6"
 
 @madlib_app.transition("card6", "click", "restart")
