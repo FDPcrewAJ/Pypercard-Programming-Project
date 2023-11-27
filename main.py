@@ -15,22 +15,22 @@ def go_2(app, card):
 
 @madlib_app.transition("card2", "click", "go_3")
 def go_3(app, card):
-    app.datastore["n_1"] = card.get_by_id("n_1").value
+    app.datastore[""] = card.get_by_id("").value
     return "card3"
 
 @madlib_app.transition("card3", "click", "go_4")
 def go_4(app, card):
-    app.datastore["v_1"] = card.get_by_id("v_1").value
+    app.datastore[""] = card.get_by_id("").value
     return "card4"
 
 @madlib_app.transition("card4", "click", "go_5")
 def go_5(app, card):
-    app.datastore["a_1"] = card.get_by_id("a_1").value
+    app.datastore[""] = card.get_by_id("").value
     return "card5"
 
 @madlib_app.transition("card5", "click", "go_6")
 def go_6(app,card):
-    app.datastore["av_1"] = card.get_by_id("av_1").value
+    app.datastore[""] = card.get_by_id("").value
     return "card6"
 
 @madlib_app.transition("card6", "click", "restart")
