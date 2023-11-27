@@ -9,8 +9,9 @@ carousel_app = App(
 )
 
 @carousel_app.transition("card1", "click", "go_2")
-def go_2(app, card):
-    return "card2"  
+def go_2(app, card): 
+    app.datastore["user_name"] = card.get_by_id("user_name").value
+    return "card2"
 
 @carousel_app.transition("card2", "click", "reset")
 def reset(app, card):

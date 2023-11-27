@@ -26,6 +26,8 @@
                         <div class="p-card__content">
                             <p>This is card 1.</p>
                             <p>You can go to card 2 with the button below.</p>
+                            <label for="user_name">Enter your name:</label>
+                            <input id="user_name" type="text">
                             <button id="go_2">To card 2</button>
                         </div>
                     </div>
@@ -36,6 +38,7 @@
                         <div class="p-card__content">
                             <p>You can click to card 3 to go to the final card.</p>
                             <p>Or you can click reset to go back to card 1.</p>
+                            <h3>Hello {user_name}</h3>
                             <button id="reset" >Reset</button>
                             <button id="go_3" autofocus>To card 3</button>
                         </div>
