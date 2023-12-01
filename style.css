@@ -77,3 +77,9 @@ input {
     justify-content: center;
     gap: 150px;
 }
+
+.progress {
+    float: right;
+    margin: 5px;
+    padding: 0px;
+}
