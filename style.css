@@ -41,7 +41,7 @@ p {
     margin: 0 auto;
 }
 
-#credit {
+#credit_text {
     font-family: 'Open Sans', serif;
     color: var(--alt-bg-text);
 }
